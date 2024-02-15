@@ -13,7 +13,7 @@ def alumnos():
     apa = ''
     ama = ''
     alumno_clase = forms.UserForm(request.form)
-    if request.method == 'POST':
+    if request.method == 'POST' and alumno_clase.validate():
         nom = alumno_clase.nombre.data
         apa = alumno_clase.aPaterno.data
         ama = alumno_clase.aMaterno.data
